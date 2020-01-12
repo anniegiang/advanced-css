@@ -1,0 +1,80 @@
+.btn {
+  /* link is a pseudo class, special state of the selector */
+  /* visited is when the button is clicked before and sees it again */
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    /* by default it is inline */
+    /* box-model will apply as if the element was a block element */
+    /* padding, width, height will now apply */
+    /* treated like text */
+    display: inline-block;
+    border-radius: 10rem;
+    /* all specifies that all properties will be animated */
+    transition: all 0.2s;
+    /* need to add this if child elements have position absolute */
+    position: relative;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    /* moves up  */
+    transform: translateY(-3px);
+    /* xOffset, yOffset, strength of blur, color */
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    /* when button is hover, add styling to the after psuedo element */
+    &::after {
+      /* scale makes the button bigger */
+      transform: scaleX(1.4) scaleY(1.6);
+      /* fades the element outs */
+      opacity: 0;
+    }
+  }
+
+  /* button is clicked */
+  &:active {
+    /* moves up  */
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  /* after adds an element after the element */
+  /* treated like a child of the element */
+  &::after {
+    /* must specify content and display props for element to appear */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* puts this element behind element */
+    /* need to set the parent button to have position: relative */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* set the positioning if elements are one above the other */
+    /* set behind the button */
+    z-index: -1;
+    /* add transition in the initial state */
+    /* enables the fading effect */
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    /* applies the styles in 0% before the animation starts */
+    animation-fill-mode: backwards;
+  }
+}

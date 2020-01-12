@@ -1,0 +1,46 @@
+.header {
+  /* child elements will position relative to .header */
+  position: relative;
+  height: 95vh;
+  /* use background image to get background gradient */
+  /* order matters, right now the gradient is above the img */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  /* top of the image always stay at top regardless of change in screen size */
+  background-position: top;
+  /* clockwise coordinates of areas to display, the rest are clipped out */
+  /* 75vh will make the element change dynamically to different screen sizes */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    /* need to specify position relative to its parent */
+    /* top and left values are relative to its parent (.header) */
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    /* width will scale accordingly to the height */
+    /* we could have just specified the width alone */
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    /* center everything */
+    position: absolute;
+    /* positions relative to its parent */
+    top: 40%;
+    left: 50%;
+    /* positions not relative to the parent element but to the element itself */
+    /* shift half of the width and height to the left/top side */
+    transform: translate(-50%, -50%);
+    /* centers the button */
+    text-align: center;
+  }
+}

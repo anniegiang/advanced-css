@@ -1,0 +1,205 @@
+/* browser performance is optimized for opacity and transform */
+@keyframes moveInLeft {
+  /* before the animation starts */
+  0% {
+    /* makes the element invisible */
+    opacity: 0;
+    /* move from the left to right, 100px left of current position */
+    transform: translateX(-10rem); }
+  80% {
+    /* goes to the right side, 10px right of current position*/
+    transform: translateX(1rem); }
+  /* animation finishes */
+  100% {
+    opacity: 1;
+    /* where it is right now */
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  /* before the animation starts */
+  0% {
+    /* makes the element invisible */
+    opacity: 0;
+    /* move from the right to left, 100px right of current position */
+    transform: translateX(10rem); }
+  80% {
+    /* goes to the left side, 10px left of current position*/
+    transform: translateX(-1rem); }
+  /* animation finishes */
+  100% {
+    opacity: 1;
+    /* where it is right now */
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  /* before the animation starts */
+  0% {
+    opacity: 0;
+    /* move from the bottom to top, 100px bottom of current position */
+    transform: translateY(3rem); }
+  /* animation finishes */
+  100% {
+    opacity: 1;
+    /* where it is right now */
+    transform: translate(0); } }
+
+body {
+  /* body contains the entire webpage */
+  /* best practice to specify font in body */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-style: 16px; */
+  /* 1.7 bigger than default */
+  line-height: 1.7;
+  color: #777;
+  /* adds padding to entire body */
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* a hack to prevent the animation from shaking after animation finishes */
+  backface-visibility: hidden;
+  /* adds space between text and button */
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    /* puts the text on different lines that occupies 100% of the width */
+    display: block;
+    font-size: 6rem;
+    /* by default h1 has a higher font-weight */
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* delay before animation starts */
+    /* animation-delay: 3s; */
+    /* how many times to show animation */
+    /* animation-iteration-count: 3s; */
+    /* speed of the animation across time */
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    /* puts the text on different lines that occupies 100% of the width */
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    /* shorthand */
+    animation: moveInRight 1s ease-out; }
+
+.btn {
+  /* link is a pseudo class, special state of the selector */
+  /* visited is when the button is clicked before and sees it again */
+  /* button is clicked */
+  /* after adds an element after the element */
+  /* treated like a child of the element */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    /* by default it is inline */
+    /* box-model will apply as if the element was a block element */
+    /* padding, width, height will now apply */
+    /* treated like text */
+    display: inline-block;
+    border-radius: 10rem;
+    /* all specifies that all properties will be animated */
+    transition: all 0.2s;
+    /* need to add this if child elements have position absolute */
+    position: relative;
+    font-size: 1.6rem; }
+  .btn:hover {
+    /* moves up  */
+    transform: translateY(-3px);
+    /* xOffset, yOffset, strength of blur, color */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    /* when button is hover, add styling to the after psuedo element */ }
+    .btn:hover::after {
+      /* scale makes the button bigger */
+      transform: scaleX(1.4) scaleY(1.6);
+      /* fades the element outs */
+      opacity: 0; }
+  .btn:active {
+    /* moves up  */
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn::after {
+    /* must specify content and display props for element to appear */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* puts this element behind element */
+    /* need to set the parent button to have position: relative */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* set the positioning if elements are one above the other */
+    /* set behind the button */
+    z-index: -1;
+    /* add transition in the initial state */
+    /* enables the fading effect */
+    transition: all 0.4s; }
+  .btn--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    /* applies the styles in 0% before the animation starts */
+    animation-fill-mode: backwards; }
+
+.header {
+  /* child elements will position relative to .header */
+  position: relative;
+  height: 95vh;
+  /* use background image to get background gradient */
+  /* order matters, right now the gradient is above the img */
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  /* top of the image always stay at top regardless of change in screen size */
+  background-position: top;
+  /* clockwise coordinates of areas to display, the rest are clipped out */
+  /* 75vh will make the element change dynamically to different screen sizes */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    /* need to specify position relative to its parent */
+    /* top and left values are relative to its parent (.header) */
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    /* width will scale accordingly to the height */
+    /* we could have just specified the width alone */
+    height: 3.5rem; }
+  .header__text-box {
+    /* center everything */
+    position: absolute;
+    /* positions relative to its parent */
+    top: 40%;
+    left: 50%;
+    /* positions not relative to the parent element but to the element itself */
+    /* shift half of the width and height to the left/top side */
+    transform: translate(-50%, -50%);
+    /* centers the button */
+    text-align: center; }
+
+*,
+*::after,
+*::before {
+  /* reset because browsers by default add some margin and padding */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* set a root font-size so that ALL rem values inherit relative to this */
+  /* bad practice to specify font size in pixels bc it overrides the browser's font size that the user can manually change in the settings */
+  /* 62.5% = 10px = 10 / browser's default font size (16px) */
+  /* 1rem = 10px */
+  font-size: 62.5%; }
+
+body {
+  /* border and padding are not added to the total width & height */
+  box-sizing: border-box; }

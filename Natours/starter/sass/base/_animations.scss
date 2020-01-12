@@ -1,0 +1,60 @@
+/* browser performance is optimized for opacity and transform */
+@keyframes moveInLeft {
+  /* before the animation starts */
+  0% {
+    /* makes the element invisible */
+    opacity: 0;
+    /* move from the left to right, 100px left of current position */
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    /* goes to the right side, 10px right of current position*/
+    transform: translateX(1rem);
+  }
+
+  /* animation finishes */
+  100% {
+    opacity: 1;
+    /* where it is right now */
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  /* before the animation starts */
+  0% {
+    /* makes the element invisible */
+    opacity: 0;
+    /* move from the right to left, 100px right of current position */
+    transform: translateX(10rem);
+  }
+
+  80% {
+    /* goes to the left side, 10px left of current position*/
+    transform: translateX(-1rem);
+  }
+
+  /* animation finishes */
+  100% {
+    opacity: 1;
+    /* where it is right now */
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  /* before the animation starts */
+  0% {
+    opacity: 0;
+    /* move from the bottom to top, 100px bottom of current position */
+    transform: translateY(3rem);
+  }
+
+  /* animation finishes */
+  100% {
+    opacity: 1;
+    /* where it is right now */
+    transform: translate(0);
+  }
+}

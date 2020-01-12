@@ -1,0 +1,50 @@
+body {
+  /* body contains the entire webpage */
+  /* best practice to specify font in body */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-style: 16px; */
+  /* 1.7 bigger than default */
+  line-height: 1.7;
+  color: $color-grey-dark;
+  /* adds padding to entire body */
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  /* a hack to prevent the animation from shaking after animation finishes */
+  backface-visibility: hidden;
+  /* adds space between text and button */
+  margin-bottom: 6rem;
+
+  &--main {
+    /* puts the text on different lines that occupies 100% of the width */
+    display: block;
+    font-size: 6rem;
+    /* by default h1 has a higher font-weight */
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+
+    /* delay before animation starts */
+    /* animation-delay: 3s; */
+    /* how many times to show animation */
+    /* animation-iteration-count: 3s; */
+    /* speed of the animation across time */
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    /* puts the text on different lines that occupies 100% of the width */
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    /* shorthand */
+    animation: moveInRight 1s ease-out;
+  }
+}
