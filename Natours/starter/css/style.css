@@ -160,12 +160,16 @@ body {
     content: "";
     display: table;
     clear: both; }
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 6rem; }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2);
     background-color: greenyellow;
     float: left; }
-    .row .col-1-of-2:not(:last-child) {
-      margin-right: 6rem; }
+  .row .col-1-of-3 {
+    width: calc((100% - (2 * 6rem)) / 3);
+    background-color: greenyellow;
+    float: left; }
 
 .header {
   /* child elements will position relative to .header */
