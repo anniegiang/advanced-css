@@ -1,0 +1,14 @@
+.row {
+  // standard width is 1140px/10px = 114rem (1rem = 10px), we should not used fixed units
+  // max-width: if we have enough available space,the browser will use the specified width,
+  // else, it will fill 100% of the available space
+  max-width: $grid-width;
+  background-color: pink;
+  // center nested block elements
+  margin: 0 auto;
+
+  // select all rows except for the last row
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+}

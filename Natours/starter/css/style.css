@@ -150,6 +150,13 @@ body {
     /* applies the styles in 0% before the animation starts */
     animation-fill-mode: backwards; }
 
+.row {
+  max-width: 114rem;
+  background-color: pink;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+
 .header {
   /* child elements will position relative to .header */
   position: relative;
