@@ -12,12 +12,15 @@
     margin-bottom: $gutter-vertical;
   }
 
+  // without this, the row parent element collapses its height to 0 bc all its child elements are floated
+  @include clearfix;
+
   .col-1-of-2 {
     // calc lets you mix units (can't do this in scss)
     // #{} to use sass variables
     width: calc((100% - #{$gutter-horizontal}) / 2);
     background-color: greenyellow;
-    float: left; 
+    float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
