@@ -15,8 +15,13 @@
   // without this, the row parent element collapses its height to 0 bc all its child elements are floated
   @include clearfix;
 
-  // select all elements with classes that start with "col-"
+  // [class=^="col-"] select all elements with classes that start with "col-"
+  // [class=""] : contains
+  // [class$=""] : ends with
+
   [class^="col-"] {
+    background-color: greenyellow;
+    float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
@@ -26,13 +31,9 @@
     // calc lets you mix units (can't do this in scss)
     // #{} to use sass variables
     width: calc((100% - #{$gutter-horizontal}) / 2);
-    background-color: greenyellow;
-    float: left;
   }
 
   .col-1-of-3 {
     width: calc((100% - (2 * #{$gutter-horizontal})) / 3);
-    background-color: greenyellow;
-    float: left;
   }
 }
