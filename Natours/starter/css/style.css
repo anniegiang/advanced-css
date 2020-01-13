@@ -91,9 +91,13 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 0.2rem;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
+  color: transparent;
   -webkit-background-clip: text;
-  color: transparent; }
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg); }
 
 .btn {
   /* link is a pseudo class, special state of the selector */
