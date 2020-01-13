@@ -48,3 +48,20 @@ body {
     animation: moveInRight 1s ease-out;
   }
 }
+
+.heading-secondary {
+  // gradient goes up to the width of the content
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  // gradient will be show where there is text
+  -webkit-background-clip: text;
+  // setting the text transparent allows you to see the background image 
+  color: transparent;
+}

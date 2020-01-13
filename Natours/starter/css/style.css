@@ -86,6 +86,15 @@ body {
     /* shorthand */
     animation: moveInRight 1s ease-out; }
 
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent; }
+
 .btn {
   /* link is a pseudo class, special state of the selector */
   /* visited is when the button is clicked before and sees it again */
@@ -184,6 +193,11 @@ body {
     transform: translate(-50%, -50%);
     /* centers the button */
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
 
 *,
 *::after,
