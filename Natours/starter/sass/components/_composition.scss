@@ -1,0 +1,29 @@
+.composition {
+  // elements with position absolute will position relative to this element
+  position: relative;
+  &__photo {
+    // always define images in percentages so that it is responsive to the viewport
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 0.2rem;
+    // place images on top of each other, images will be placed according to a reference
+    position: absolute;
+
+    &--p1 {
+      // move 0px from the left relative to the container (composition)
+      left: 0;
+      // move -2rem from the top relative to the container (composition)
+      top: -2rem;
+    }
+
+    &--p2 {
+      right: 0;
+      top: 2rem;
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+    }
+  }
+}
