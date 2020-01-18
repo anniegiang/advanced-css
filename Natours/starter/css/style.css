@@ -103,6 +103,9 @@ body {
 .u-center-text {
   text-align: center; }
 
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
 .btn {
   /* link is a pseudo class, special state of the selector */
   /* visited is when the button is clicked before and sees it again */
@@ -169,7 +172,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: pink;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -178,7 +180,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: greenyellow;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }

@@ -3,7 +3,6 @@
   // max-width: if we have enough available space,the browser will use the specified width,
   // else, it will fill 100% of the available space
   max-width: $grid-width;
-  background-color: pink;
   // center nested block elements
   margin: 0 auto;
 
@@ -20,8 +19,8 @@
   // [class$=""] : ends with
 
   [class^="col-"] {
-    background-color: greenyellow;
     float: left;
+
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
