@@ -185,6 +185,22 @@ body {
     animation: moveInBottom 0.5s ease-out 0.75s;
     /* applies the styles in 0% before the animation starts */
     animation-fill-mode: backwards; }
+  .btn-text:link, .btn-text:visited {
+    color: #55c57a;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid #55c57a;
+    padding: 0.3rem;
+    font-size: 1.6rem;
+    transition: all 0.2s; }
+  .btn-text:hover {
+    background-color: #55c57a;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.2rem); }
+  .btn-text:active {
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(0); }
 
 .row {
   max-width: 114rem;

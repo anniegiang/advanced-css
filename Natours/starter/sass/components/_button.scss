@@ -16,7 +16,7 @@
     transition: all 0.2s;
     /* need to add this if child elements have position absolute */
     position: relative;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
   }
 
   &:hover {
@@ -76,5 +76,30 @@
     animation: moveInBottom 0.5s ease-out 0.75s;
     /* applies the styles in 0% before the animation starts */
     animation-fill-mode: backwards;
+  }
+
+  &-text {
+    &:link,
+    &:visited {
+      color: $color-primary;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 0.1rem solid $color-primary;
+      padding: 0.3rem;
+      font-size: $default-font-size;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+      transform: translateY(-0.2rem);
+    }
+
+    &:active {
+      box-shadow: 0 0.2rem 1rem rgba($color-black, 0.15);
+      transform: translateY(0);
+    }
   }
 }
