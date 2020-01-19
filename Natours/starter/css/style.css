@@ -202,6 +202,18 @@ body {
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(0); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .card__side {
+    background-color: orangered;
+    color: white;
+    font-size: 2rem;
+    height: 50rem;
+    transition: all 0.8s; }
+  .card:hover .card__side {
+    transform: rotateY(180deg); }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -323,6 +335,11 @@ body {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem; }
 
 *,
 *::after,

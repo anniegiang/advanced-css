@@ -1,0 +1,16 @@
+.card {
+  perspective: 150rem; // has to be in the parent container
+  -moz-perspective: 150rem; // for mozilla 5
+
+  &__side {
+    background-color: orangered;
+    color: white;
+    font-size: 2rem;
+    height: 50rem;
+    transition: all 0.8s;
+  }
+
+  &:hover &__side {
+    transform: rotateY(180deg);
+  }
+}
