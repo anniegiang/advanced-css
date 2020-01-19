@@ -37,7 +37,7 @@
       transform: scale(1.05);
       // increase shadow since the element pops towards the user
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-      // highest z-index will be placed on top
+      // hovered images with highest z-index will be placed on top
       z-index: 20;
     }
   }
