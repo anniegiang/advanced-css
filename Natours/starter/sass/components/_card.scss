@@ -1,6 +1,11 @@
 .card {
   perspective: 150rem; // has to be in the parent container
   -moz-perspective: 150rem; // for mozilla 5
+  position: relative;
+  // place cards on top of one another, but also takes the cards out of their nature flow, parent will collapse and lose height
+  // fix this by giving the height to the parent
+  // clearfix doesn't work when children have position absolute
+  height: 50rem;
 
   &__side {
     background-color: orangered;
@@ -8,9 +13,29 @@
     font-size: 2rem;
     height: 50rem;
     transition: all 0.8s;
+    // place cards on top of one another, but also takes the cards out of their nature flow, parent will collapse and lose height
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // hides the back part of an element
+    backface-visibility: hidden;
+
+    &--front {
+      background-color: orangered;
+    }
+
+    &--back {
+      background-color: green;
+      transform: rotateY(180deg);
+    }
   }
 
-  &:hover &__side {
+  &:hover &__side--front {
     transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
   }
 }
