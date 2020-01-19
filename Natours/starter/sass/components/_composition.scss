@@ -41,4 +41,10 @@
       z-index: 20;
     }
   }
+
+  // when we hover over the composition, add styling to the photos that are not hovered
+  // the photos that are not hovered will decrease in size
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
 }
