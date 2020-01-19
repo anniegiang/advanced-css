@@ -11,6 +11,8 @@
     // overlaps all the other images
     z-index: 10;
     transition: all 0.2s;
+    // adds on to outline property
+    outline-offset: 2rem;
 
     &--p1 {
       // move 0px from the left relative to the container (composition)
@@ -30,6 +32,8 @@
     }
 
     &:hover {
+      // border achieves the same thing but using outline lets us use outline-offset
+      outline: 1.5rem solid $color-primary;
       transform: scale(1.05);
       // increase shadow since the element pops towards the user
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
