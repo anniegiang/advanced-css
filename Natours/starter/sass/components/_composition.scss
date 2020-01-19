@@ -34,7 +34,7 @@
     &:hover {
       // border achieves the same thing but using outline lets us use outline-offset
       outline: 1.5rem solid $color-primary;
-      transform: scale(1.05);
+      transform: scale(1.05) translateY(-0.5rem);
       // increase shadow since the element pops towards the user
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
       // hovered images with highest z-index will be placed on top
