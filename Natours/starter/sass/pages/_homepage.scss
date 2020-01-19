@@ -6,6 +6,7 @@
 }
 
 .section-features {
+  margin-top: -20vh;
   padding: 20rem 0;
   /* use background image to get background gradient */
   /* order matters, right now the gradient is above the img */
@@ -17,4 +18,12 @@
     url("../img/nat-4.jpg");
   // background image covers the entire section
   background-size: cover;
+
+  // skew container
+  transform: skewY(-7deg);
+
+  // select direct children of this container, skew in the opposite direction of parent container
+  & > * {
+    transform: skewY(7deg);
+  }
 }
