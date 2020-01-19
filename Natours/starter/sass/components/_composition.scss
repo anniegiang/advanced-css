@@ -8,6 +8,9 @@
     border-radius: 0.2rem;
     // place images on top of each other, images will be placed according to a reference
     position: absolute;
+    // overlaps all the other images
+    z-index: 10;
+    transition: all 0.2s;
 
     &--p1 {
       // move 0px from the left relative to the container (composition)
@@ -24,6 +27,14 @@
     &--p3 {
       left: 20%;
       top: 10rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      // increase shadow since the element pops towards the user
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      // highest z-index will be placed on top
+      z-index: 20;
     }
   }
 }
