@@ -244,7 +244,8 @@ body {
     color: transparent;
     -webkit-background-clip: text; }
   .feature-box:hover {
-    transform: scale(1.03) translateY(-1.5rem); }
+    transform: scale(1.03) translateY(-1.5rem);
+    cursor: pointer; }
 
 .row {
   max-width: 114rem;
@@ -313,7 +314,7 @@ body {
   margin-top: -20vh; }
 
 .section-features {
-  margin-top: -20vh;
+  margin-top: -10vh;
   padding: 20rem 0;
   /* use background image to get background gradient */
   /* order matters, right now the gradient is above the img */
