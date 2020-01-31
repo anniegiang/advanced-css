@@ -5,10 +5,12 @@
   background-color: $color-white;
   border-radius: 0.3rem;
   padding: 6rem;
+  padding-left: 9rem;
   font-size: $default-font-size;
+  transform: skewX(-12deg);
 
+  // amena afreen
   &__shape {
-    background-color: pink;
     width: 15rem;
     height: 15rem;
     float: left;
@@ -18,5 +20,14 @@
     ); // can only work if the element is floated & has defined dimentions
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__text {
+    transform: skewX(12deg);
   }
 }
