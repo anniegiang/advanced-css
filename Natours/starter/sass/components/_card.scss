@@ -21,7 +21,7 @@
     // hides the back part of an element
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    box-shadow: $box-shadow-1;
 
     &--front {
       background-color: $color-white;
