@@ -53,5 +53,6 @@
   }
   &:hover &__img {
     transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(80%);
   }
 }

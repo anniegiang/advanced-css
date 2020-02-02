@@ -395,7 +395,8 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%); }
   .story:hover .story__img {
-    transform: translateX(-4rem) scale(1); }
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(80%); }
 
 .row {
   max-width: 114rem;
