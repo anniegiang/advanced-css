@@ -498,6 +498,16 @@ body {
   margin-top: -10rem;
   position: relative; }
 
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: url(../img/nat-10.jpg);
+  background-size: cover;
+  height: 50rem;
+  border-radius: 3px; }
+
 *,
 *::after,
 *::before {
