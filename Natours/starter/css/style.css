@@ -5,19 +5,15 @@
     /* makes the element invisible */
     opacity: 0;
     /* move from the left to right, 100px left of current position */
-    transform: translateX(-10rem);
-  }
+    transform: translateX(-10rem); }
   80% {
     /* goes to the right side, 10px right of current position*/
-    transform: translateX(1rem);
-  }
+    transform: translateX(1rem); }
   /* animation finishes */
   100% {
     opacity: 1;
     /* where it is right now */
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 @keyframes moveInRight {
   /* before the animation starts */
@@ -25,34 +21,27 @@
     /* makes the element invisible */
     opacity: 0;
     /* move from the right to left, 100px right of current position */
-    transform: translateX(10rem);
-  }
+    transform: translateX(10rem); }
   80% {
     /* goes to the left side, 10px left of current position*/
-    transform: translateX(-1rem);
-  }
+    transform: translateX(-1rem); }
   /* animation finishes */
   100% {
     opacity: 1;
     /* where it is right now */
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 @keyframes moveInBottom {
   /* before the animation starts */
   0% {
     opacity: 0;
     /* move from the bottom to top, 100px bottom of current position */
-    transform: translateY(3rem);
-  }
+    transform: translateY(3rem); }
   /* animation finishes */
   100% {
     opacity: 1;
     /* where it is right now */
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 body {
   /* body contains the entire webpage */
@@ -64,8 +53,7 @@ body {
   line-height: 1.7;
   color: #777;
   /* adds padding to entire body */
-  padding: 3rem;
-}
+  padding: 3rem; }
 
 .heading-primary {
   color: #fff;
@@ -73,33 +61,30 @@ body {
   /* a hack to prevent the animation from shaking after animation finishes */
   backface-visibility: hidden;
   /* adds space between text and button */
-  margin-bottom: 6rem;
-}
-.heading-primary--main {
-  /* puts the text on different lines that occupies 100% of the width */
-  display: block;
-  font-size: 6rem;
-  /* by default h1 has a higher font-weight */
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  /* delay before animation starts */
-  /* animation-delay: 3s; */
-  /* how many times to show animation */
-  /* animation-iteration-count: 3s; */
-  /* speed of the animation across time */
-  animation-timing-function: ease-out;
-}
-.heading-primary--sub {
-  /* puts the text on different lines that occupies 100% of the width */
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  /* shorthand */
-  animation: moveInRight 1s ease-out;
-}
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    /* puts the text on different lines that occupies 100% of the width */
+    display: block;
+    font-size: 6rem;
+    /* by default h1 has a higher font-weight */
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* delay before animation starts */
+    /* animation-delay: 3s; */
+    /* how many times to show animation */
+    /* animation-iteration-count: 3s; */
+    /* speed of the animation across time */
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    /* puts the text on different lines that occupies 100% of the width */
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    /* shorthand */
+    animation: moveInRight 1s ease-out; }
 
 .heading-secondary {
   display: inline-block;
@@ -110,150 +95,123 @@ body {
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   color: transparent;
   -webkit-background-clip: text;
-  transition: all 0.2s;
-}
-.heading-secondary:hover {
-  transform: skewY(2deg) skewX(15deg) scale(1.1);
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .paragraph {
-  font-size: 1.6rem;
-}
-.paragraph:not(:last-child) {
-  margin-bottom: 3rem;
-}
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
 
 .u-center-text {
-  text-align: center;
-}
+  text-align: center; }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem;
-}
+  margin-bottom: 8rem; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem;
-}
+  margin-bottom: 4rem; }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem;
-}
+  margin-bottom: 1.5rem; }
 
 .u-margin-top-big {
-  margin-top: 8rem;
-}
+  margin-top: 8rem; }
 
 .u-margin-top-huge {
-  margin-top: 10rem;
-}
+  margin-top: 10rem; }
 
 .btn {
   /* link is a pseudo class, special state of the selector */
   /* visited is when the button is clicked before and sees it again */
   /* button is clicked */
   /* after adds an element after the element */
-  /* treated like a child of the element */
-}
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  /* by default it is inline */
-  /* box-model will apply as if the element was a block element */
-  /* padding, width, height will now apply */
-  /* treated like text */
-  display: inline-block;
-  border-radius: 10rem;
-  /* all specifies that all properties will be animated */
-  transition: all 0.2s;
-  /* need to add this if child elements have position absolute */
-  position: relative;
-  font-size: 1.6rem;
-}
-.btn:hover {
-  /* moves up  */
-  transform: translateY(-3px);
-  /* xOffset, yOffset, strength of blur, color */
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /* when button is hover, add styling to the after psuedo element */
-}
-.btn:hover::after {
-  /* scale makes the button bigger */
-  transform: scaleX(1.4) scaleY(1.6);
-  /* fades the element outs */
-  opacity: 0;
-}
-.btn:active {
-  /* moves up  */
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-.btn--white::after {
-  background-color: #fff;
-}
-.btn--green {
-  background-color: #55c57a;
-  color: #fff;
-}
-.btn--green::after {
-  background-color: #55c57a;
-}
-.btn::after {
-  /* must specify content and display props for element to appear */
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  /* puts this element behind element */
-  /* need to set the parent button to have position: relative */
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* set the positioning if elements are one above the other */
-  /* set behind the button */
-  z-index: -1;
-  /* add transition in the initial state */
-  /* enables the fading effect */
-  transition: all 0.4s;
-}
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  /* applies the styles in 0% before the animation starts */
-  animation-fill-mode: backwards;
-}
-.btn-text:link,
-.btn-text:visited {
-  color: #55c57a;
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: 0.1rem solid #55c57a;
-  padding: 0.3rem;
-  font-size: 1.6rem;
-  transition: all 0.2s;
-}
-.btn-text:hover {
-  background-color: #55c57a;
-  color: white;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-0.2rem);
-}
-.btn-text:active {
-  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0);
-}
+  /* treated like a child of the element */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    /* by default it is inline */
+    /* box-model will apply as if the element was a block element */
+    /* padding, width, height will now apply */
+    /* treated like text */
+    display: inline-block;
+    border-radius: 10rem;
+    /* all specifies that all properties will be animated */
+    transition: all 0.2s;
+    /* need to add this if child elements have position absolute */
+    position: relative;
+    font-size: 1.6rem; }
+  .btn:hover {
+    /* moves up  */
+    transform: translateY(-3px);
+    /* xOffset, yOffset, strength of blur, color */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    /* when button is hover, add styling to the after psuedo element */ }
+    .btn:hover::after {
+      /* scale makes the button bigger */
+      transform: scaleX(1.4) scaleY(1.6);
+      /* fades the element outs */
+      opacity: 0; }
+  .btn:active {
+    /* moves up  */
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff; }
+    .btn--green::after {
+      background-color: #55c57a; }
+  .btn::after {
+    /* must specify content and display props for element to appear */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* puts this element behind element */
+    /* need to set the parent button to have position: relative */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* set the positioning if elements are one above the other */
+    /* set behind the button */
+    z-index: -1;
+    /* add transition in the initial state */
+    /* enables the fading effect */
+    transition: all 0.4s; }
+  .btn--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    /* applies the styles in 0% before the animation starts */
+    animation-fill-mode: backwards; }
+  .btn-text:link, .btn-text:visited {
+    color: #55c57a;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid #55c57a;
+    padding: 0.3rem;
+    font-size: 1.6rem;
+    transition: all 0.2s; }
+  .btn-text:hover {
+    background-color: #55c57a;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.2rem); }
+  .btn-text:active {
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(0); }
 
 .bg-video {
   position: absolute;
@@ -263,296 +221,221 @@ body {
   width: 100%;
   z-index: -1;
   opacity: 0.15;
-  overflow: hidden;
-}
-.bg-video__content {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
-}
-.card__side {
-  background-color: orangered;
-  height: 52rem;
-  transition: all 0.8s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  backface-visibility: hidden;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-}
-.card__side--front {
-  background-color: #fff;
-}
-.card__side--back {
-  transform: rotateY(180deg);
-}
-.card__side--back-1 {
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
-}
-.card__side--back-2 {
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-}
-.card__side--back-3 {
-  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
-}
-.card:hover .card__side--front {
-  transform: rotateY(-180deg);
-}
-.card:hover .card__side--back {
-  transform: rotateY(0);
-}
-.card__picture {
-  background-size: cover;
-  height: 23rem;
-  background-blend-mode: screen;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
-}
-.card__picture--1 {
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
-    url(../img/nat-5.jpg);
-}
-.card__picture--2 {
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485),
-    url(../img/nat-6.jpg);
-}
-.card__picture--3 {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(41, 152, 255, 0.85),
-      rgba(86, 67, 250, 0.85)
-    ),
-    url(../img/nat-7.jpg);
-}
-.card__heading {
-  font-size: 2.8rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #fff;
-  position: absolute;
-  top: 12rem;
-  right: 2rem;
-  text-align: right;
-  width: 75%;
-}
-.card__heading-span {
-  padding: 1rem 1.5rem;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-.card__heading-span--1 {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(255, 185, 0, 0.85),
-    rgba(255, 119, 48, 0.85)
-  );
-}
-.card__heading-span--2 {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(126, 213, 111, 0.85),
-    rgba(40, 180, 133, 0.85)
-  );
-}
-.card__heading-span--3 {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(41, 152, 255, 0.85),
-    rgba(86, 67, 250, 0.85)
-  );
-}
-.card__details {
-  padding: 3rem;
-}
-.card__details ul {
-  list-style: none;
-  width: 80%;
-  margin: 0 auto;
-}
-.card__details ul li {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 1rem;
-}
-.card__details ul li:not(:last-child) {
-  border-bottom: 1px solid #eee;
-}
-.card__cta {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  text-align: center;
-}
-.card__price-box {
-  color: #fff;
-  margin-bottom: 8rem;
-}
-.card__price-only {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-}
-.card__price-value {
-  font-size: 6rem;
-  font-weight: 100;
-}
+  height: 52rem; }
+  .card__side {
+    background-color: orangered;
+    height: 52rem;
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)), url(../img/nat-7.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
-  position: relative;
-}
-.composition__photo {
-  width: 55%;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-  border-radius: $border-radius-3;
-  position: absolute;
-  z-index: 10;
-  transition: all 0.2s;
-  outline-offset: 2rem;
-}
-.composition__photo--p1 {
-  left: 0;
-  top: -2rem;
-}
-.composition__photo--p2 {
-  right: 0;
-  top: 2rem;
-}
-.composition__photo--p3 {
-  left: 20%;
-  top: 10rem;
-}
-.composition__photo:hover {
-  outline: 1.5rem solid #55c57a;
-  transform: scale(1.05) translateY(-0.5rem);
-  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-  z-index: 20;
-}
-.composition:hover .composition__photo:not(:hover) {
-  transform: scale(0.95);
-}
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.2rem;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   padding: 2.5rem;
   text-align: center;
-  border-radius: $border-radius-3;
+  border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s;
-}
-.feature-box__icon {
-  font-size: 6rem;
-  display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  color: transparent;
-  -webkit-background-clip: text;
-}
-.feature-box:hover {
-  transform: scale(1.03) translateY(-1.5rem);
-  cursor: pointer;
-}
+  transition: transform 0.3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    color: transparent;
+    -webkit-background-clip: text; }
+  .feature-box:hover {
+    transform: scale(1.03) translateY(-1.5rem);
+    cursor: pointer; }
 
 .story {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6em rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.6);
-  border-radius: $border-radius-3;
+  border-radius: 0.3rem;
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.6rem;
-  transform: skewX(-12deg);
-}
-.story__shape {
-  width: 15rem;
-  height: 15rem;
-  float: left;
-  -webkit-shape-outside: circle(50% a 50% 50%);
-  shape-outside: circle(50% at 50% 50%);
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-  transform: translateX(-3rem) skewX(12deg);
-  position: relative;
-}
-.story__img {
-  height: 100%;
-  transform: translateX(-4rem) scale(1.4);
-  transition: all 0.2s;
-}
-.story__text {
-  transform: skewX(12deg);
-}
-.story__caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 20%);
-  text-transform: uppercase;
-  font-size: 1.7rem;
-  text-align: center;
-  color: #fff;
-  opacity: 0;
-  transition: all 0.5s;
-  backface-visibility: hidden;
-}
-.story:hover .story__caption {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-}
-.story:hover .story__img {
-  transform: translateX(-4rem) scale(1);
-  filter: blur(0.3rem) brightness(80%);
-}
+  transform: skewX(-12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% a 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all 0.2s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(80%); }
 
 .row {
   max-width: 114rem;
-  margin: 0 auto;
-}
-.row:not(:last-child) {
-  margin-bottom: 8rem;
-}
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row [class^="col-"] {
-  float: left;
-}
-.row [class^="col-"]:not(:last-child) {
-  margin-right: 6rem;
-}
-.row .col-1-of-2 {
-  width: calc((100% - 6rem) / 2);
-}
-.row .col-1-of-3 {
-  width: calc((100% - (2 * 6rem)) / 3);
-}
-.row .col-2-of-3 {
-  width: calc((2 * (100% - (2 * 6rem)) / 3) + 6rem);
-}
-.row .col-1-of-4 {
-  width: calc((100% - (3 * 6rem)) / 4);
-}
-.row .col-2-of-4 {
-  width: calc((2 * (100% - (3 * 6rem)) / 4) + 6rem);
-}
-.row .col-3-of-4 {
-  width: calc(3 * ((100% - (3 * 6rem)) / 4) + 2 * 6rem);
-}
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - (2 * 6rem)) / 3); }
+  .row .col-2-of-3 {
+    width: calc( (2 * (100% - (2 * 6rem)) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - (3 * 6rem)) / 4); }
+  .row .col-2-of-4 {
+    width: calc( (2 * (100% - (3 * 6rem)) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - (3 * 6rem)) / 4) + 2 * 6rem); }
 
 .header {
   /* child elements will position relative to .header */
@@ -560,91 +443,71 @@ body {
   height: 95vh;
   /* use background image to get background gradient */
   /* order matters, right now the gradient is above the img */
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
-    ),
-    url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   /* top of the image always stay at top regardless of change in screen size */
   background-position: top;
   /* clockwise coordinates of areas to display, the rest are clipped out */
   /* 75vh will make the element change dynamically to different screen sizes */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-.header__logo-box {
-  position: absolute;
-  /* need to specify position relative to its parent */
-  /* top and left values are relative to its parent (.header) */
-  top: 4rem;
-  left: 4rem;
-}
-.header__logo {
-  /* width will scale accordingly to the height */
-  /* we could have just specified the width alone */
-  height: 3.5rem;
-}
-.header__text-box {
-  /* center everything */
-  position: absolute;
-  /* positions relative to its parent */
-  top: 40%;
-  left: 50%;
-  /* positions not relative to the parent element but to the element itself */
-  /* shift half of the width and height to the left/top side */
-  transform: translate(-50%, -50%);
-  /* centers the button */
-  text-align: center;
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    /* need to specify position relative to its parent */
+    /* top and left values are relative to its parent (.header) */
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    /* width will scale accordingly to the height */
+    /* we could have just specified the width alone */
+    height: 3.5rem; }
+  .header__text-box {
+    /* center everything */
+    position: absolute;
+    /* positions relative to its parent */
+    top: 40%;
+    left: 50%;
+    /* positions not relative to the parent element but to the element itself */
+    /* shift half of the width and height to the left/top side */
+    transform: translate(-50%, -50%);
+    /* centers the button */
+    text-align: center; }
 
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
-  margin-top: -20vh;
-}
+  margin-top: -20vh; }
 
 .section-features {
   margin-top: -10vh;
   padding: 20rem 0;
   /* use background image to get background gradient */
   /* order matters, right now the gradient is above the img */
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
-    ),
-    url("../img/nat-4.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
   background-size: cover;
-  transform: skewY(-7deg);
-}
-.section-features > * {
-  transform: skewY(7deg);
-}
+  transform: skewY(-7deg); }
+  .section-features > * {
+    transform: skewY(7deg); }
 
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
-  margin-top: -10rem;
-}
+  margin-top: -10rem; }
 
 .section-stories {
   padding: 15rem 0;
   margin-top: -10rem;
-  position: relative;
-}
+  position: relative; }
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-}
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
 
 .book {
   background-image: url(../img/nat-10.jpg);
   background-size: cover;
   height: 50rem;
   border-radius: 0.3rem;
-}
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
 
 *,
 *::after,
@@ -652,18 +515,15 @@ body {
   /* reset because browsers by default add some margin and padding */
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
   /* set a root font-size so that ALL rem values inherit relative to this */
   /* bad practice to specify font size in pixels bc it overrides the browser's font size that the user can manually change in the settings */
   /* 62.5% = 10px = 10 / browser's default font size (16px) */
   /* 1rem = 10px */
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
   /* border and padding are not added to the total width & height */
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
