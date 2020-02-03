@@ -66,6 +66,11 @@
         transparent 50%,
         $color-white 50%
       );
+
+      span {
+        margin-right: 1rem;
+        display: inline-block;
+      }
     }
 
     &:hover,
