@@ -1,6 +1,7 @@
 .btn {
   /* link is a pseudo class, special state of the selector */
   /* visited is when the button is clicked before and sees it again */
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -17,6 +18,8 @@
     /* need to add this if child elements have position absolute */
     position: relative;
     font-size: $default-font-size;
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -35,7 +38,9 @@
   }
 
   /* button is clicked */
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     /* moves up  */
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
