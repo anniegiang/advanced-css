@@ -68,7 +68,7 @@
     border-radius: 50%;
     position: absolute;
     display: inline-block;
-    top: 0;
+    top: -0.4rem;
     left: 0;
 
     &::after {
@@ -82,6 +82,11 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $color-primary;
+      opacity: 0;
     }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
   }
 }
