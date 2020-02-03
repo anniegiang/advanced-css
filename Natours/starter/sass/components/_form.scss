@@ -21,7 +21,11 @@
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
-      border-bottom: 0.3rem solid $color-secondary-dark;
+      border-bottom: 0.3rem solid $color-primary;
+
+      &:invalid {
+        border-bottom: 0.3rem solid $color-secondary-dark;
+      }
     }
 
     &::-webkit-input-placeholder {
