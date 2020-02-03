@@ -595,6 +595,7 @@ body {
   margin: 2rem; }
 
 .navigation__link:link, .navigation__link:visited {
+  display: inline-block;
   padding: 1rem 2rem;
   color: #f7f7f7;
   text-decoration: none;
@@ -607,7 +608,8 @@ body {
 
 .navigation__link:hover, .navigation__linkactive {
   background-position: 100%;
-  color: #55c57a; }
+  color: #55c57a;
+  transform: translateX(2rem); }
 
 .footer {
   background-color: #333;
