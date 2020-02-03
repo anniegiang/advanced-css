@@ -39,5 +39,11 @@
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
+    transition: all 0.3s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0; // visibility hidden is good enough but adding opacity allows us to animate
+    visibility: hidden;
   }
 }

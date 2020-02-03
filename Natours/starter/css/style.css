@@ -394,7 +394,12 @@ body {
   font-weight: 700;
   margin-left: 2rem;
   margin-top: 0.7rem;
-  display: block; }
+  display: block;
+  transition: all 0.3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden; }
 
 .story {
   width: 75%;
