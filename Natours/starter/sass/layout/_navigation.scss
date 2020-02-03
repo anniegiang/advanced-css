@@ -26,6 +26,7 @@
       $color-primary-light,
       $color-primary-dark
     );
+    transform: scale(80);
   }
 
   &__nav {
@@ -39,11 +40,37 @@
 
   &__list {
     @include center;
+    list-style: none;
+    text-align: center;
   }
 
   &__item {
+    margin: 2rem;
   }
 
   &__link {
+    &:link,
+    &:visited {
+      padding: 1rem 2rem;
+      color: $color-grey-light-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 300;
+      background-size: 220%;
+      transition: all 0.4s;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+    }
+
+    &:hover,
+    &active {
+      background-position: 100%;
+      color: $color-primary;
+    }
   }
 }

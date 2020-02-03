@@ -572,7 +572,8 @@ body {
   top: 6.5rem;
   right: 6.5rem;
   z-index: 1000;
-  background-image: radial-gradient(#7ed56f, #28b485); }
+  background-image: radial-gradient(#7ed56f, #28b485);
+  transform: scale(80); }
 
 .navigation__nav {
   height: 100vh;
@@ -586,7 +587,27 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center; }
+
+.navigation__item {
+  margin: 2rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  padding: 1rem 2rem;
+  color: #f7f7f7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+  background-size: 220%;
+  transition: all 0.4s;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%); }
+
+.navigation__link:hover, .navigation__linkactive {
+  background-position: 100%;
+  color: #55c57a; }
 
 .footer {
   background-color: #333;
