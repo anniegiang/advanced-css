@@ -426,15 +426,15 @@ body {
   top: -0.4rem;
   left: 0; }
   .form__radio-button::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 1.3rem;
     width: 1.3rem;
     content: "";
     display: block;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #55c57a;
     opacity: 0;
     transition: opacity 0.2s; }
@@ -581,6 +581,12 @@ body {
   top: 0;
   right: 0;
   z-index: 1500; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .footer {
   background-color: #333;

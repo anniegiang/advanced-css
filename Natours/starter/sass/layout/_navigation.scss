@@ -38,6 +38,7 @@
   }
 
   &__list {
+    @include center;
   }
 
   &__item {

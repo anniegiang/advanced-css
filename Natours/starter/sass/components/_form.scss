@@ -69,15 +69,12 @@
     left: 0;
 
     &::after {
+      @include center;
       height: 1.3rem;
       width: 1.3rem;
       content: "";
       display: block;
       border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       background-color: $color-primary;
       opacity: 0;
       transition: opacity 0.2s;
