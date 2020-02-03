@@ -551,6 +551,16 @@ body {
     /* centers the button */
     text-align: center; }
 
+.navigation__background {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  z-index: 1000;
+  background-image: radial-gradient(#7ed56f, #28b485); }
+
 .footer {
   background-color: #333;
   padding: 10rem 0;
