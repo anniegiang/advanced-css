@@ -551,6 +551,19 @@ body {
     /* centers the button */
     text-align: center; }
 
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000; }
+
 .navigation__background {
   width: 6rem;
   height: 6rem;
@@ -560,6 +573,14 @@ body {
   right: 6.5rem;
   z-index: 1000;
   background-image: radial-gradient(#7ed56f, #28b485); }
+
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500; }
 
 .footer {
   background-color: #333;
