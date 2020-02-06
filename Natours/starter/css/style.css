@@ -562,7 +562,8 @@ body {
   top: 6rem;
   right: 6rem;
   border-radius: 50%;
-  z-index: 2000; }
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
 
 .navigation__background {
   width: 6rem;
@@ -572,16 +573,16 @@ body {
   top: 6.5rem;
   right: 6.5rem;
   z-index: 1000;
-  background-image: radial-gradient(#7ed56f, #28b485);
-  transform: scale(80); }
+  background-image: radial-gradient(#7ed56f, #28b485); }
 
 .navigation__nav {
   height: 100vh;
-  width: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1500; }
+  z-index: 1500;
+  width: 0;
+  opacity: 0; }
 
 .navigation__list {
   position: absolute;
@@ -613,6 +614,13 @@ body {
   background-position: 100%;
   color: #55c57a;
   transform: translateX(2rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1; }
 
 .footer {
   background-color: #333;
