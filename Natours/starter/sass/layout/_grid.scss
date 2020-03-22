@@ -17,6 +17,7 @@
 
   @include respond(tab-port) {
     max-width: $grid-width-small;
+    padding: 0 3rem;
   }
 
   // without this, the row parent element collapses its height to 0 bc all its child elements are floated
