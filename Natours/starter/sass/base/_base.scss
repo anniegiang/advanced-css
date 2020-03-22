@@ -33,4 +33,10 @@ html {
 body {
   /* border and padding are not added to the total width & height */
   box-sizing: border-box;
+  /* adds padding to entire body */
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

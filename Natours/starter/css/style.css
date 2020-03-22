@@ -36,7 +36,12 @@ html {
 
 body {
   /* border and padding are not added to the total width & height */
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  /* adds padding to entire body */
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 /* browser performance is optimized for opacity and transform */
 @keyframes moveInLeft {
@@ -91,9 +96,7 @@ body {
   /* font-style: 16px; */
   /* 1.7 bigger than default */
   line-height: 1.7;
-  color: #777;
-  /* adds padding to entire body */
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -117,6 +120,10 @@ body {
     /* animation-iteration-count: 3s; */
     /* speed of the animation across time */
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     /* puts the text on different lines that occupies 100% of the width */
     display: block;
@@ -125,6 +132,9 @@ body {
     letter-spacing: 1.75rem;
     /* shorthand */
     animation: moveInRight 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -136,6 +146,12 @@ body {
   color: transparent;
   -webkit-background-clip: text;
   transition: all 0.2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }

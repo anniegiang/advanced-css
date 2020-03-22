@@ -7,8 +7,6 @@ body {
   /* 1.7 bigger than default */
   line-height: 1.7;
   color: $color-grey-dark;
-  /* adds padding to entire body */
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -36,6 +34,11 @@ body {
     /* animation-iteration-count: 3s; */
     /* speed of the animation across time */
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -46,6 +49,10 @@ body {
     letter-spacing: 1.75rem;
     /* shorthand */
     animation: moveInRight 1s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -66,6 +73,14 @@ body {
   // gradient will be show where there is text
   -webkit-background-clip: text;
   transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
