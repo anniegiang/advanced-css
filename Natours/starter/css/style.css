@@ -1,3 +1,48 @@
+/*
+
+Media Query Manager
+
+0 - 600px:       Phone
+600 - 900px:     Tablet Portrait
+900 - 1200px:    Tablet Landscape
+1200 - 1800px:   Desktop (normal styles apply here)
+1800px+:         Large Screens
+
+- media queries do not inherit from root but from the default browser settings.
+- default brower font-size is 16px
+- em works better than rem for media-queries
+- 1em = 16px
+
+*/
+*,
+*::after,
+*::before {
+  /* reset because browsers by default add some margin and padding */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  /* border and padding are not added to the total width & height */
+  box-sizing: border-box;
+  /* adds padding to entire body */
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
 /* browser performance is optimized for opacity and transform */
 @keyframes moveInLeft {
   /* before the animation starts */
@@ -51,9 +96,7 @@ body {
   /* font-style: 16px; */
   /* 1.7 bigger than default */
   line-height: 1.7;
-  color: #777;
-  /* adds padding to entire body */
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -77,6 +120,10 @@ body {
     /* animation-iteration-count: 3s; */
     /* speed of the animation across time */
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     /* puts the text on different lines that occupies 100% of the width */
     display: block;
@@ -85,6 +132,9 @@ body {
     letter-spacing: 1.75rem;
     /* shorthand */
     animation: moveInRight 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -96,6 +146,12 @@ body {
   color: transparent;
   -webkit-background-clip: text;
   transition: all 0.2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -495,6 +551,13 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -503,6 +566,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -528,7 +598,12 @@ body {
   background-position: top;
   /* clockwise coordinates of areas to display, the rest are clipped out */
   /* 75vh will make the element change dynamically to different screen sizes */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     /* need to specify position relative to its parent */
@@ -566,6 +641,14 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__background {
   width: 6rem;
@@ -577,6 +660,14 @@ body {
   z-index: 1000;
   background-image: radial-gradient(#7ed56f, #28b485);
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -667,6 +758,9 @@ body {
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #777; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
@@ -677,6 +771,10 @@ body {
     border-top: 0.1rem solid #777;
     padding-top: 2rem;
     display: inline-block; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -700,6 +798,11 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: right; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        text-align: center;
+        float: none; } }
 
 .section-about {
   background-color: #f7f7f7;
@@ -740,22 +843,3 @@ body {
   .book__form {
     width: 50%;
     padding: 6rem; }
-
-*,
-*::after,
-*::before {
-  /* reset because browsers by default add some margin and padding */
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  /* set a root font-size so that ALL rem values inherit relative to this */
-  /* bad practice to specify font size in pixels bc it overrides the browser's font size that the user can manually change in the settings */
-  /* 62.5% = 10px = 10 / browser's default font size (16px) */
-  /* 1rem = 10px */
-  font-size: 62.5%; }
-
-body {
-  /* border and padding are not added to the total width & height */
-  box-sizing: border-box; }

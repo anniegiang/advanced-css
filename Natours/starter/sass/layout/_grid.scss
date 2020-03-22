@@ -9,6 +9,15 @@
   // select all rows except for the last row
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: $grid-width-small;
+    padding: 0 3rem;
   }
 
   // without this, the row parent element collapses its height to 0 bc all its child elements are floated
@@ -23,6 +32,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important; // turns into one column, rows stacked on one another
     }
   }
 
