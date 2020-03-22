@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  /* reset because browsers by default add some margin and padding */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* set a root font-size so that ALL rem values inherit relative to this */
+  /* bad practice to specify font size in pixels bc it overrides the browser's font size that the user can manually change in the settings */
+  /* 62.5% = 10px = 10 / browser's default font size (16px) */
+  /* 1rem = 10px */
+  font-size: 62.5%;
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+  
+  @include respond(tab-port) {
+    font-size: 60%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 70%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 80%;
+  }
+}
+
+body {
+  /* border and padding are not added to the total width & height */
+  box-sizing: border-box;
+}

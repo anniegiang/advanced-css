@@ -13,3 +13,38 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/*
+
+Media Query Manager
+
+0 - 600px:       Phone
+600 - 900px:     Tablet Portrait
+900 - 1200px:    Tablet Landscape
+1200 - 1800px:   Desktop (normal styles apply here)
+1800px+:         Large Screens
+
+- media queries do not inherit from root but from the default browser settings.
+- default brower font-size is 16px
+- em works better than rem for media-queries
+- 1em = 16px
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content; } // 600px / 16
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) { @content; } // 900px / 16
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) { @content; } // 1200px / 16
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) { @content; } // 1800px / 16
+  }
+}

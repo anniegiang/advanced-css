@@ -1,3 +1,50 @@
+/*
+
+Media Query Manager
+
+0 - 600px:       Phone
+600 - 900px:     Tablet Portrait
+900 - 1200px:    Tablet Landscape
+1200 - 1800px:   Desktop (normal styles apply here)
+1800px+:         Large Screens
+
+- media queries do not inherit from root but from the default browser settings.
+- default brower font-size is 16px
+- em works better than rem for media-queries
+- 1em = 16px
+
+*/
+*,
+*::after,
+*::before {
+  /* reset because browsers by default add some margin and padding */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* set a root font-size so that ALL rem values inherit relative to this */
+  /* bad practice to specify font size in pixels bc it overrides the browser's font size that the user can manually change in the settings */
+  /* 62.5% = 10px = 10 / browser's default font size (16px) */
+  /* 1rem = 10px */
+  font-size: 62.5%; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 70%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
+
+body {
+  /* border and padding are not added to the total width & height */
+  box-sizing: border-box; }
+
 /* browser performance is optimized for opacity and transform */
 @keyframes moveInLeft {
   /* before the animation starts */
@@ -740,22 +787,3 @@ body {
   .book__form {
     width: 50%;
     padding: 6rem; }
-
-*,
-*::after,
-*::before {
-  /* reset because browsers by default add some margin and padding */
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  /* set a root font-size so that ALL rem values inherit relative to this */
-  /* bad practice to specify font size in pixels bc it overrides the browser's font size that the user can manually change in the settings */
-  /* 62.5% = 10px = 10 / browser's default font size (16px) */
-  /* 1rem = 10px */
-  font-size: 62.5%; }
-
-body {
-  /* border and padding are not added to the total width & height */
-  box-sizing: border-box; }
